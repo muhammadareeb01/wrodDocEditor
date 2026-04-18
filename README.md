@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DocFlow Collaborative Document Editor
 
-## Getting Started
+Hello! This is a complete online document editor and real time collaboration workspace I developed over the last 5 hours. It is built natively with Next.js 14 and Supabase.
 
-First, run the development server:
+I wanted to keep the user experience simple but fully functional. I focused on a clean modern UI that feels like a premium productivity tool while ensuring the core rich text editing features work flawlessly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features Built During This Sprint
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Secure Authentication** 
+Set up Supabase Auth for simple email and password login to protect user data and ensure secure access to the dashboard and workspace.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Rich Text Editor Engine** 
+Integrated Tiptap to build a powerful rich text editing experience. It features automatic saving to silently sync changes to the cloud without interrupting the creative flow. The canvas UI is designed to feel like a real sheet of paper.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Cloud Database and Sharing System** 
+Designed PostgreSQL database tables for document management and team collaboration permissions. I implemented a robust "Share via Email" feature so you can easily invite colleagues to view and collaborate on your files. The dashboard neatly separates your personal files from shared teamwork.
 
-## Learn More
+4. **Instant File Imports**
+Instead of forcing users to always start from scratch, I wrote a custom file parser. You can directly upload plain text or markdown files to automatically convert them into a fully editable online document.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Modern UI Polish**
+Designed a bright and soft interface using custom CSS variables for a premium visual aesthetic. Integrated toast notifications for smooth user feedback and wrote automated Vitest software testing to validate file parsing logic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technical Stack Overview
+* Next.js 14 App Router
+* React and TypeScript
+* Tailwind CSS
+* Supabase PostgreSQL Database and Auth
+* Tiptap Rich Text Engine
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Setup Instructions
 
-## Deploy on Vercel
+If you want to run this application locally:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository and install all packages using `npm install`
+2. Duplicate the `.env.local.example` file to create a `.env` file and paste in your Supabase API keys.
+3. Run the SQL queries from `database.sql` directly in your Supabase SQL editor to create the necessary tables.
+4. Start the frontend development server using `npm run dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+That is everything! It is a fast and lightweight collaborative writing tool that handles team sharing perfectly.
+
+---
+&copy; 2026 DocFlow
