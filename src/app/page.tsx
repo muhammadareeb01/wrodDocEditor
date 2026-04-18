@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -52,7 +52,7 @@ export default function Home() {
               { icon: "⚡", title: "Instant Collaboration", desc: "Share a link and see your teammates' cursors moving in real-time." },
               { icon: "📄", title: "File Import", desc: "Upload .txt or .md files instantly to start editing without copy-pasting." },
               { icon: "🔒", title: "Granular Permissions", desc: "Easily control who views or edits your content. Maintain privacy by default." },
-            ].map((feature, i) => (
+            ].map((feature) => (
               <div key={feature.title} className="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:-translate-y-1 transition-transform">
                 <span className="text-4xl mb-4 block">{feature.icon}</span>
                 <h3 className="font-bold mb-2 text-lg text-gray-800">{feature.title}</h3>
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Work faster, not harder.</h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Managing documents shouldn't feel like a chore. DocFlow offers a seamless rich-text TiTap editor that formats beautifully as you type. Combined with our real-time engine, you'll never overwrite a colleague's work again.
+              Managing documents shouldn&apos;t feel like a chore. DocFlow offers a seamless rich-text TiTap editor that formats beautifully as you type. Combined with our real-time engine, you&apos;ll never overwrite a colleague&apos;s work again.
             </p>
             <ul className="space-y-3 mb-8">
               {[

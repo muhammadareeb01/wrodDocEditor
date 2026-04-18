@@ -105,7 +105,8 @@ export async function POST(request: Request) {
     return NextResponse.json({
       message: `Document shared with ${email} successfully`,
     });
-  } catch (err) {
+  } catch (error) {
+    console.error("Error sharing document:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
